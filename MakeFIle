@@ -1,0 +1,5 @@
+ARG := $(wordlist 2, $(words $(MAKECMDGOALS)), $(MAKECMDGOALS))
+$(eval $(ARG):;@true)
+
+setup_venv:
+	bash scripts/setup-venv.sh
